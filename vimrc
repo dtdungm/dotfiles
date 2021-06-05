@@ -41,7 +41,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'rhysd/vim-clang-format'
 " Plugin 'Chiel92/vim-autoformat'
-
+Plugin 'tpope/vim-fugitive'
 " Plugin 'easymotion/vim-easymotion'
 "Plugin 'kshenoy/vim-signature'
 Plugin 'ntpeters/vim-better-whitespace'
