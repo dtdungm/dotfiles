@@ -25,7 +25,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'git@github.com:papis/papis-vim.git'
+Plugin 'https://github.com/papis/papis-vim.git'
 " Plugin 'kshenoy/vim-signature'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/badwolf'
