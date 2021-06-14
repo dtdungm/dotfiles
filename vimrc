@@ -22,8 +22,8 @@ set encoding=utf8
 set backspace=indent,eol,start
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plugin 'junegunn/fzf.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'https://github.com/papis/papis-vim.git'
 " Plugin 'kshenoy/vim-signature'
@@ -102,3 +102,19 @@ call vimtex#imaps#add_map({
   \ 'context' : ["itemize", "enumerate", "compactitem"],
   \})
 let g:coc_disable_startup_warning = 1
+
+
+function! PapisBibtexRef()
+  let l:temp = tempname()
+  echom l:temp
+  silent exec "!papis bibtex ref -o ".l:temp
+  let l:olda = @a
+  let @a = join(readfile(l:temp), ',')
+  normal! "ap
+  redraw!
+  let @a = l:olda
+endfunction
+
+command! -nargs=0 BibRef call PapisBibtexRef()
+command! -nargs=0 BibOpen exec "!papis bibtex open"
+
