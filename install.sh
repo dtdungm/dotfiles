@@ -5,7 +5,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc tern-project latexmkrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc tern-project latexmkrc emacs"    # list of files/folders to symlink in homedir
 
 ##########
 
